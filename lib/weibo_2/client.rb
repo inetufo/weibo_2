@@ -4,6 +4,8 @@ module WeiboOAuth2
   class Client < OAuth2::Client
  
     def initialize(client_id='', client_secret='', opts={}, &block)
+      logger.info "~~~~~~WeiboOAuth2 Client initialize api_key #{WeiboOAuth2::Config.api_key}"
+      logger.info "~~~~~~weibo client_secret #{Devise.omniauth_configs[:weibo].strategy.client_secret}"
       client_id = WeiboOAuth2::Config.api_key if client_id.empty?
       client_secret = WeiboOAuth2::Config.api_secret if client_secret.empty?
       super
