@@ -19,7 +19,6 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency "rspec", "~> 2.6"
   
   gem.add_runtime_dependency 'oauth2', "~> 0.8.0"
-  gem.add_runtime_dependency 'hashie', "~> 1.2.0"
   gem.add_runtime_dependency 'json'  , "~> 1.7.3"
   gem.add_runtime_dependency 'rest-client', "~> 1.6.7"
 end
